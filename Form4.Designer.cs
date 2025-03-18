@@ -30,9 +30,7 @@
         {
             txtBoxSearch = new TextBox();
             label1 = new Label();
-            dataGridView1 = new DataGridView();
             label2 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // txtBoxSearch
@@ -52,16 +50,6 @@
             label1.TabIndex = 1;
             label1.Text = "Search";
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(29, 150);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(252, 259);
-            dataGridView1.TabIndex = 2;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -77,12 +65,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(464, 454);
             Controls.Add(label2);
-            Controls.Add(dataGridView1);
             Controls.Add(label1);
             Controls.Add(txtBoxSearch);
             Name = "Form4";
             Text = "Form4";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -93,5 +79,7 @@
         private Label label1;
         private DataGridView dataGridView1;
         private Label label2;
+        private ListBox listBox1;
+        private ListBox listBoxControl1;
     }
 }

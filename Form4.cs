@@ -27,17 +27,27 @@ namespace WinFormsApp
 
             var data = new ApiData();
             var projectData = data.GetData();
+             ListBox mylist = new ListBox();
+
+            mylist.Location = new Point(287, 109); 
+        mylist.Size = new Size(120, 95); 
+        mylist.ForeColor = Color.Purple; 
 
             foreach(var d in projectData)
             {
-                var row = dataTable.NewRow();
 
-                row["projectName"] = d.ProjectName;
+                mylist.Items.Add(d.ProjectName);
 
-                dataTable.Rows.Add(row);
+                //var row = dataTable.NewRow();
+
+                //row["Project Name"] = d.ProjectName;
+
+                //dataTable.Rows.Add(row);
             }
 
-            this.dataGridView1.DataSource = dataTable;
+            this.Controls.Add(mylist);
+
+            //this.dataGridView1.DataSource = dataTable;
         }
 
 

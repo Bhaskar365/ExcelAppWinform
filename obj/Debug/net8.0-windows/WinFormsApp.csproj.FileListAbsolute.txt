@@ -66,3 +66,4 @@ C:\running_projects\ExcelWinForm\WinFormsApp\WinFormsApp\bin\Debug\net8.0-window
 C:\running_projects\ExcelWinForm\WinFormsApp\WinFormsApp\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\running_projects\ExcelWinForm\WinFormsApp\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.csproj.AssemblyReference.cache
 C:\running_projects\ExcelWinForm\WinFormsApp\WinFormsApp\obj\Debug\net8.0-windows\WinForms.79E25943.Up2Date
+C:\running_projects\ExcelWinForm\WinFormsApp\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.sourcelink.json
