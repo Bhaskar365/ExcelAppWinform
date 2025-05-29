@@ -15,7 +15,7 @@ namespace WinFormsApp
 {
     public partial class Form4 : Form
     {
-        private bool isDataLoaded = false;
+       // private bool isDataLoaded = false;
         public Form4()
         {
             InitializeComponent();
@@ -53,7 +53,7 @@ namespace WinFormsApp
 
             listBox2.DataSource = apidataList;
 
-            isDataLoaded = true;
+            //isDataLoaded = true;
 
             //this.Controls.Add(mylist);
 

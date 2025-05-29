@@ -147,5 +147,32 @@ namespace WinFormsApp
         {
 
         }
+
+        private void buttonDropdown_Click(object sender, EventArgs e)
+        {
+            contextMenuStrip1.Items.Clear();
+
+            List<string> projects = new List<string>() { "Generation Panel" };
+
+            // Populate the dropdown menu
+            foreach (var project in projects)
+            {
+                var menuItem = new ToolStripMenuItem(project);
+                menuItem.Click += (s, args) =>
+                {
+                    // Open Form5 with selected project
+                    //Form5 form5 = new Form5(project.ProjectName);
+                    //form5.Show();
+                };
+
+                contextMenuStrip1.Items.Add(menuItem);
+            }
+
+            // Show dropdown under the button
+            contextMenuStrip1.Show(buttonDropdown, new Point(0, buttonDropdown.Height));
+
+
+
+        }
     }
 }

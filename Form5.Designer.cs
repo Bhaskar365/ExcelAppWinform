@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
-            button1 = new Button();
             button2 = new Button();
             button3 = new Button();
             label1 = new Label();
@@ -38,18 +38,11 @@
             flowLayoutPanel2 = new FlowLayoutPanel();
             listBox2 = new ListBox();
             Label2 = new Label();
+            buttonDropdown = new Button();
+            contextMenuStrip1 = new ContextMenuStrip(components);
             flowLayoutPanel1.SuspendLayout();
             flowLayoutPanel2.SuspendLayout();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Location = new Point(296, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(72, 32);
-            button1.TabIndex = 0;
-            button1.Text = "Tools";
-            button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -126,17 +119,34 @@
             Label2.TabIndex = 7;
             Label2.Text = "Breakdown";
             // 
+            // buttonDropdown
+            // 
+            buttonDropdown.Location = new Point(296, 12);
+            buttonDropdown.Name = "buttonDropdown";
+            buttonDropdown.Size = new Size(91, 32);
+            buttonDropdown.TabIndex = 8;
+            buttonDropdown.Text = "Tools";
+            buttonDropdown.UseVisualStyleBackColor = true;
+            buttonDropdown.Click += buttonDropdown_Click;
+            // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.ImageScalingSize = new Size(24, 24);
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
+            contextMenuStrip1.Text = "contextMenuStrip1";
+            // 
             // Form5
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(797, 495);
+            Controls.Add(buttonDropdown);
             Controls.Add(Label2);
             Controls.Add(flowLayoutPanel2);
             Controls.Add(label1);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(button1);
             Controls.Add(flowLayoutPanel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form5";
@@ -150,8 +160,6 @@
         }
 
         #endregion
-
-        private Button button1;
         private Button button2;
         private Button button3;
         private Label label1;
@@ -160,5 +168,7 @@
         private FlowLayoutPanel flowLayoutPanel2;
         private Label Label2;
         private ListBox listBox2;
+        private Button buttonDropdown;
+        private ContextMenuStrip contextMenuStrip1;
     }
 }
