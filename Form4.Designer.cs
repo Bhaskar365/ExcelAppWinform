@@ -31,6 +31,9 @@
             txtBoxSearch = new TextBox();
             label1 = new Label();
             label2 = new Label();
+            groupBox1 = new GroupBox();
+            listBox2 = new ListBox();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // txtBoxSearch
@@ -53,22 +56,45 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(29, 109);
+            label2.Location = new Point(10, 0);
             label2.Name = "label2";
-            label2.Size = new Size(110, 25);
+            label2.Size = new Size(127, 25);
             label2.TabIndex = 3;
-            label2.Text = "Load Project";
+            label2.Text = "Load A Project";
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(listBox2);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Location = new Point(29, 107);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(197, 188);
+            groupBox1.TabIndex = 4;
+            groupBox1.TabStop = false;
+            // 
+            // listBox2
+            // 
+            listBox2.FormattingEnabled = true;
+            listBox2.ItemHeight = 25;
+            listBox2.Location = new Point(10, 30);
+            listBox2.Name = "listBox2";
+            listBox2.Size = new Size(181, 154);
+            listBox2.TabIndex = 4;
+            listBox2.SelectedIndexChanged += listBox2_SelectedIndexChanged;
+            listBox2.MouseDoubleClick += listBox2_MouseDoubleClick;
             // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(464, 454);
-            Controls.Add(label2);
+            Controls.Add(groupBox1);
             Controls.Add(label1);
             Controls.Add(txtBoxSearch);
             Name = "Form4";
             Text = "Form4";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -81,5 +107,7 @@
         private Label label2;
         private ListBox listBox1;
         private ListBox listBoxControl1;
+        private GroupBox groupBox1;
+        private ListBox listBox2;
     }
 }

@@ -2,14 +2,13 @@ namespace WinFormsApp
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
+
+        static Form1 splashForm;
+        static Form2 mainForm;
+
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
             Thread t = new Thread(new ThreadStart(ThreadStart));
@@ -17,7 +16,31 @@ namespace WinFormsApp
             t.ApartmentState = ApartmentState.STA;
             t.Start();
 
+            Form1 frm = new Form1();
+            
+
             Application.Run(new Form1());
+
+            //splashForm = new Form1();
+            //var splashThread = new Thread(new ThreadStart(
+            //        () => Application.Run(splashForm)
+            //    ));
+            //splashThread.SetApartmentState(ApartmentState.STA);
+            //splashThread.Start();
+
+            //mainForm = new Form2();
+            //mainForm.Load += mainForm_load;
+            //Application.Run(mainForm);
+        }
+
+        private static void mainForm_load(object sender, EventArgs e) 
+        {
+            if (splashForm != null && !splashForm.Disposing && !splashForm.IsDisposed)
+                splashForm.Invoke(new Action(()=>splashForm.Close()));
+
+            mainForm.TopMost = true;
+            mainForm.Activate();
+            mainForm.TopMost = false;
         }
 
         private static void ThreadStart()

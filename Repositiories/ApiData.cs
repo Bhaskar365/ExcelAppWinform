@@ -49,5 +49,41 @@ namespace WinFormsApp.Repositiories
 
             return data;
         }
+        public List<ProjectModel> GetBreakdownAPIData() 
+        {
+            HttpClient http = new HttpClient();
+            var data = new List<ProjectModel>();
+
+            try 
+            {
+                using(SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string sql = "SELECT * from ProjectData ORDER BY id DESC";
+
+                    using(SqlCommand command = new SqlCommand(sql,connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                ProjectModel projectModel = new ProjectModel();
+                                projectModel.ProjectName = reader.GetString(1);
+                                projectModel.PageName = reader.GetString(2);
+                                projectModel.Breakdown = reader.GetString(3);
+
+                                data.Add(projectModel);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex) 
+            {
+                throw new Exception(ex.Message);
+            }
+            return data;
+        }
     }
 }

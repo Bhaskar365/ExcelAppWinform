@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsApp.Models;
 using WinFormsApp.Repositiories;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WinFormsApp
 {
     public partial class Form4 : Form
     {
+        private bool isDataLoaded = false;
         public Form4()
         {
             InitializeComponent();
@@ -27,25 +30,32 @@ namespace WinFormsApp
 
             var data = new ApiData();
             var projectData = data.GetData();
-             ListBox mylist = new ListBox();
 
-            mylist.Location = new Point(287, 109); 
-        mylist.Size = new Size(120, 95); 
-        mylist.ForeColor = Color.Purple; 
+            //ListBox mylist = new ListBox();
 
-            foreach(var d in projectData)
+
+            //mylist.Dock = DockStyle.Fill;
+            //mylist.Location = new Point(33, 145); 
+            //mylist.Size = new Size(50, 50); 
+            //mylist.ForeColor = Color.Purple;
+
+            List<string> apidataList = new List<string>();
+
+            foreach (var d in projectData)
             {
-
-                mylist.Items.Add(d.ProjectName);
-
+                //  mylist.Items.Add(d.ProjectName);
                 //var row = dataTable.NewRow();
-
                 //row["Project Name"] = d.ProjectName;
-
                 //dataTable.Rows.Add(row);
+
+                apidataList.Add(d.ProjectName);
             }
 
-            this.Controls.Add(mylist);
+            listBox2.DataSource = apidataList;
+
+            isDataLoaded = true;
+
+            //this.Controls.Add(mylist);
 
             //this.dataGridView1.DataSource = dataTable;
         }
@@ -60,6 +70,28 @@ namespace WinFormsApp
         {
 
         }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //if(listBox2.SelectedItem != null)
+            //{
+            //    string selectedProject = listBox2.SelectedItem.ToString();
+            //    Form5 form = new Form5(selectedProject);
+            //    form.Show();
+            //}
+        }
+
+        private void listBox2_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int index = listBox2.IndexFromPoint(e.Location);
+            if(index != ListBox.NoMatches) 
+            {
+                string selectedProject = listBox2.Items[index].ToString();
+                Form5 form5 = new Form5(selectedProject);
+                form5.Show();
+            }
+        }
+
 
         //private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
         //{
