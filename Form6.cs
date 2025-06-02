@@ -30,50 +30,9 @@ namespace WinFormsApp
                 projectTestname.Add(p.Testname);
             }
 
-            // Load += Form1_Load;
-
             Load += PopulateCheckboxes;
-
-            //FlowLayoutPanel flowPanel = new FlowLayoutPanel();
-            //flowPanel.FlowDirection = FlowDirection.TopDown;
-            //flowPanel.AutoScroll = true;
-            //flowPanel.WrapContents = false;
-            //flowPanel.Size = new Size(255, 319);
-            //groupBox1.Controls.Add(flowPanel);
-
-            //foreach (var item in projectTestname)
-            //{
-            //    CheckBox cb = new CheckBox();
-            //    cb.Text = item;
-            //    cb.AutoSize = true;
-            //    flowPanel.Controls.Add(cb);
-            //}
-
         }
 
-
-        private async void Form1_Load(object sender, EventArgs e)
-        {
-            int yPosition = 59; // Initial vertical position
-            if (projectTestname.Count > 0)
-            {
-                foreach (var item in projectTestname)
-                {
-                    CheckBox checkBox = new CheckBox
-                    {
-                        Text = item,
-                        Location = new System.Drawing.Point(11, yPosition),
-                        AutoSize = true
-                    };
-                    this.Controls.Add(checkBox);
-                    yPosition += 20; // Adjust vertical spacing
-                }
-
-                // Form settings
-                //this.Text = "Dynamic Checkboxes";
-                //this.Size = new System.Drawing.Size(800, 700);
-            }
-        }
 
 
         private void textBox2_TextChanged(object sender, EventArgs e)

@@ -24,7 +24,7 @@ namespace WinFormsApp.Repositiories
                 {
                     connection.Open();
 
-                    string sql = "SELECT * FROM ProjectData ORDER BY id DESC";
+                    string sql = "SELECT * FROM ExcelChartsGenerationData ORDER BY id DESC";
 
                     using(SqlCommand command = new SqlCommand(sql,connection))
                     {
@@ -60,7 +60,7 @@ namespace WinFormsApp.Repositiories
                 {
                     connection.Open();
 
-                    string sql = "SELECT * from ProjectData ORDER BY id DESC";
+                    string sql = "SELECT * from ExcelChartsGenerationData ORDER BY id DESC";
 
                     using(SqlCommand command = new SqlCommand(sql,connection))
                     {

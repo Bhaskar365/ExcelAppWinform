@@ -15,7 +15,7 @@ namespace WinFormsApp
 {
     public partial class Form4 : Form
     {
-       // private bool isDataLoaded = false;
+        // private bool isDataLoaded = false;
         public Form4()
         {
             InitializeComponent();
@@ -48,7 +48,16 @@ namespace WinFormsApp
                 //row["Project Name"] = d.ProjectName;
                 //dataTable.Rows.Add(row);
 
-                apidataList.Add(d.ProjectName);
+                bool alreadyExist = apidataList.Contains(d.ProjectName);
+
+                if (alreadyExist)
+                {
+                    // skip
+                }
+                else
+                {
+                    apidataList.Add(d.ProjectName);
+                }
             }
 
             listBox2.DataSource = apidataList;
@@ -84,7 +93,7 @@ namespace WinFormsApp
         private void listBox2_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int index = listBox2.IndexFromPoint(e.Location);
-            if(index != ListBox.NoMatches) 
+            if (index != ListBox.NoMatches)
             {
                 string selectedProject = listBox2.Items[index].ToString();
                 Form5 form5 = new Form5(selectedProject);

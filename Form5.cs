@@ -69,7 +69,18 @@ namespace WinFormsApp
                 //row["Project Name"] = d.ProjectName;
                 //dataTable.Rows.Add(row);
 
-                apidataList.Add(d.ProjectName);
+                bool alreadyExist = apidataList.Contains(d.ProjectName);
+
+                if (alreadyExist)
+                {
+                    // skip
+                }
+                else
+                {
+                    apidataList.Add(d.ProjectName);
+                }
+
+                //apidataList.Add(d.ProjectName);
             }
 
             listBox1.DataSource = apidataList;
@@ -90,7 +101,18 @@ namespace WinFormsApp
                 //row["Project Name"] = d.ProjectName;
                 //dataTable.Rows.Add(row);
 
-                breakdownList.Add(d.Breakdown);
+                bool alreadyExist = breakdownList.Contains(d.Breakdown);
+
+                if (alreadyExist)
+                {
+                    // skip
+                }
+                else
+                {
+                    breakdownList.Add(d.Breakdown);
+                }
+
+               // breakdownList.Add(d.Breakdown);
             }
 
             listBox2.DataSource = breakdownList;
