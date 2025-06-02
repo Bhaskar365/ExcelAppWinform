@@ -83,7 +83,6 @@ namespace WinFormsApp
             var data2 = new ApiData();
             var projectData2 = data2.GetBreakdownAPIData().Where(p => p.ProjectName == project);
 
-
             foreach (var d in projectData2)
             {
                 //  mylist.Items.Add(d.ProjectName);
@@ -163,6 +162,8 @@ namespace WinFormsApp
                     // Open Form5 with selected project
                     //Form5 form5 = new Form5(project.ProjectName);
                     //form5.Show();
+                    Form6 form6 = new Form6(selectedProject);
+                    form6.Show();
                 };
 
                 contextMenuStrip1.Items.Add(menuItem);

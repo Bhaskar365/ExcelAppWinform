@@ -69,3 +69,4 @@ C:\running_projects\ExcelWinForm\WinFormsApp\WinFormsApp\obj\Debug\net8.0-window
 C:\running_projects\ExcelWinForm\WinFormsApp\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.sourcelink.json
 C:\running_projects\ExcelWinForm\WinFormsApp\WinFormsApp\bin\Debug\net8.0-windows\WinFormsApp.dll.config
 C:\running_projects\ExcelWinForm\WinFormsApp\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.Form5.resources
+C:\running_projects\ExcelWinForm\WinFormsApp\WinFormsApp\obj\Debug\net8.0-windows\WinFormsApp.Form6.resources
