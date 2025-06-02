@@ -72,6 +72,7 @@ namespace WinFormsApp.Repositiories
                                 projectModel.ProjectName = reader.GetString(1);
                                 projectModel.PageName = reader.GetString(2);
                                 projectModel.Breakdown = reader.GetString(3);
+                                projectModel.Testname = reader.GetString(4);
 
                                 data.Add(projectModel);
                             }

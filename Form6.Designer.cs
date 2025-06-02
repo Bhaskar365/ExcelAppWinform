@@ -32,12 +32,11 @@
             tabPage1 = new TabPage();
             groupBox1 = new GroupBox();
             label1 = new Label();
-            textBox2 = new TextBox();
             textBox1 = new TextBox();
             tabPage2 = new TabPage();
             tabPage3 = new TabPage();
             tabPage4 = new TabPage();
-            checkBox1 = new CheckBox();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -68,9 +67,8 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(checkBox1);
+            groupBox1.Controls.Add(flowLayoutPanel1);
             groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(textBox2);
             groupBox1.Controls.Add(textBox1);
             groupBox1.Location = new Point(246, 19);
             groupBox1.Name = "groupBox1";
@@ -87,16 +85,6 @@
             label1.Size = new Size(58, 25);
             label1.TabIndex = 2;
             label1.Text = "Pages";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(6, 55);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.ScrollBars = ScrollBars.Both;
-            textBox2.Size = new Size(228, 265);
-            textBox2.TabIndex = 1;
-            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // textBox1
             // 
@@ -136,16 +124,12 @@
             tabPage4.Text = "Reports";
             tabPage4.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // flowLayoutPanel1
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(11, 59);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(121, 29);
-            checkBox1.TabIndex = 3;
-            checkBox1.Text = "checkBox1";
-            checkBox1.UseVisualStyleBackColor = true;
-            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            flowLayoutPanel1.Location = new Point(16, 58);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(255, 234);
+            flowLayoutPanel1.TabIndex = 3;
             // 
             // Form6
             // 
@@ -170,9 +154,8 @@
         private TabPage tabPage3;
         private TabPage tabPage4;
         private GroupBox groupBox1;
-        private TextBox textBox2;
         private TextBox textBox1;
         private Label label1;
-        private CheckBox checkBox1;
+        private FlowLayoutPanel flowLayoutPanel1;
     }
 }
