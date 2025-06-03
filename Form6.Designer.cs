@@ -31,12 +31,12 @@
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             groupBox1 = new GroupBox();
+            flowLayoutPanel1 = new FlowLayoutPanel();
             label1 = new Label();
             textBox1 = new TextBox();
             tabPage2 = new TabPage();
             tabPage3 = new TabPage();
             tabPage4 = new TabPage();
-            flowLayoutPanel1 = new FlowLayoutPanel();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -76,6 +76,14 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Lists";
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new Point(16, 58);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(255, 234);
+            flowLayoutPanel1.TabIndex = 3;
             // 
             // label1
             // 
@@ -123,13 +131,6 @@
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Reports";
             tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.Location = new Point(16, 58);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(255, 234);
-            flowLayoutPanel1.TabIndex = 3;
             // 
             // Form6
             // 
